@@ -1,0 +1,54 @@
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1A202C; /* Default dark text */
+  background-color: #FFFFFF; /* Default white background */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* For IE and Edge (legacy) */
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* .gradient-footer class removed as it's no longer used */
+
+.hero-slide {
+  min-width: 100%;
+  scroll-snap-align: start;
+  transition: opacity 0.7s ease-in-out; /* Ensure this is opacity, not transform for fade */
+}
